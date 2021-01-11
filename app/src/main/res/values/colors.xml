@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#427739</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="activityBackground">#E3F3DE</color>
+
+    <color name="spendingRed">#B52626</color>
+    <color name="incomeGreen">#3FC33F</color>
+    <color name="balanceBlue">#3333ff</color>
+    <color name="defaultBlack">#0a0a0a</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

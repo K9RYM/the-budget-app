@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <LinearLayout
+        android:id="@+id/linearMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/today_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="today" />
+
+        <EditText
+            android:id="@+id/entryAmount_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="auto"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:backgroundTint="@color/colorPrimary"
+                android:shadowRadius="0"
+                android:layout_marginHorizontal="10dp"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/enter_bt"
+                android:textColor="#ffffff"
+                android:text="Enter" />
+
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/segmentBtn"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal"
+                android:shadowColor="@color/spendingRed"
+                android:shadowDy="10"
+                android:shadowDx="10"
+                android:shadowRadius="10"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/spending_sgb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    app:strokeColor="@color/spendingRed"
+                    app:rippleColor="@color/colorPrimaryDark"
+                    android:text="Spending"
+                    android:textColor="@color/defaultBlack"
+                    android:padding="0dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:textSize="12sp"
+                    android:checked="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/income_sgb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Income"
+                    android:padding="0dp"
+                    android:textSize="12sp"
+                    app:strokeColor="@color/spendingRed"
+                    app:rippleColor="@color/colorPrimaryDark"
+                    android:textColor="@color/defaultBlack"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/description_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:hint="Description" />
+
+
+            <Spinner
+                android:id="@+id/account_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="0.4"
+                android:text="notes" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="spendings"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="income" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:text="balance" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/spendings_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/spendingRed" />
+
+            <TextView
+                android:id="@+id/income_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/incomeGreen"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/balance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:textColor="@color/balanceBlue"
+                android:text="0" />
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/entriesView_rc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animationCache="false"
+            android:background="#E8ECE7"
+            android:clickable="true"
+            android:focusable="true"
+            android:longClickable="true" />
+
+
+    </LinearLayout>
+
+    <!--
+    <com.evolve.backdroplibrary.BackdropContainer
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/backdropcontainer"
+        app:menuIcon="@drawable/ic_launcher_background"
+        app:closeIcon="@drawable/ic_launcher_foreground"
+        app:duration="500">
+        <include layout="@layout/fragment_calendar"/>
+        <include layout="@layout/record_card"/>
+
+
+    </com.evolve.backdroplibrary.BackdropContainer>
+    -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

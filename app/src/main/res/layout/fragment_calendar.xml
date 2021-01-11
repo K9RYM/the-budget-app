@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.CalendarFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.marcohc.robotocalendar.RobotoCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calDaySpending"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="spendings"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calDaySpending_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/spendingRed"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calDayIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Income"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calDayIncome_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/incomeGreen"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calDayWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Wallet"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calDayWallet_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textColor="@color/balanceBlue"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calMthSpending"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="spendings"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calMthSpending_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/spendingRed"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calMthIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Income"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calMthIncome_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/incomeGreen"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calMthWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Wallet"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calMthWallet_tv"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/balanceBlue"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calMthAVG"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="AVG"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calMthAVG_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calMthSTD"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="STD"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calMthSTD_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calMthTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:text="Target"
+                        tools:ignore="NestedWeights" />
+
+                    <TextView
+                        android:id="@+id/calMthTarget_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textColor="@color/balanceBlue"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal|top"
+                        android:text="0" />
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
