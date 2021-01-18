@@ -24,22 +24,5 @@ public interface RecordsDAO {
     @Query("SELECT * FROM Records WHERE month=:MonthNum and day=:Day")
     List<Record> getRecordsforDay(int MonthNum, int Day);
 
-    @Query("INSERT INTO Accounts (accountName,balance,currency) VALUES(:AccountName,:Balance,:Currency)")
-    void CreateAccount(String AccountName, double Balance, String Currency);
-
-    @Query("DELETE FROM Accounts WHERE accountName = :AccountName")
-    void DeleteAccount(String AccountName);
-
-    @Query("SELECT * FROM Accounts")
-    List<Account> getMyAccounts();
-
-    @Query("INSERT INTO Months (monthNumber,mainWallet,reserveMoney,bankAccount,target) VALUES(:monthNumber,:mainWallet,:reserveMoney,:bankAccount,:target)")
-    void CreateMonthRecord(int monthNumber, double mainWallet, double reserveMoney, double bankAccount, int target);
-
-    @Query("UPDATE Months SET mainWallet = :mainWallet , reserveMoney = :reserveMoney ,bankAccount = :bankAccount, target = :target WHERE monthNumber = :monthNumber")
-    void EditRecord(int monthNumber, double mainWallet, double reserveMoney, double bankAccount, int target);
-
-    @Query("SELECT * FROM Months WHERE monthNumber=:montNumber")
-    List<Month> getMonthInfo(int montNumber);
 
 }

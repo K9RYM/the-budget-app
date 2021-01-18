@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "Accounts")
 public class Account {
 
     public Account(String Name, double Balance, String Currency) {
@@ -16,12 +16,8 @@ public class Account {
 
 
     @PrimaryKey
-    private String accountName;
+    public String accountName;
 
-
-    public String getAccountName() {
-        return accountName;
-    }
 
     @ColumnInfo
     private double balance;

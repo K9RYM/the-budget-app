@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "Months")
 public class Month {
 
     public Month(int monthNumber, double mainWallet, double reserveMoney, double bankAccount, int target) {

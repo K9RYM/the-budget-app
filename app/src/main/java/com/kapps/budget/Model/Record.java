@@ -2,24 +2,25 @@ package com.kapps.budget.Model;
 
 
 import androidx.room.ColumnInfo;
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(foreignKeys = {@ForeignKey(entity = Account.class, parentColumns = "accountName", childColumns = "account"),
-        @ForeignKey(entity = Month.class, parentColumns = "monthNumber", childColumns = "month")})
-public class Record {
 
-    public Record(double Amount, char Type, String Description, String Account, long Time, int Day, int Month) {
-        amount = Amount;
-        description = Description;
-        recordType = Type;
-        this.time = Time;
-        this.account = Account;
-        day = Day;
-        month = Month;
-    }
+@Entity(tableName = "Records", foreignKeys = {@ForeignKey(entity = Account.class, parentColumns = "accountName", childColumns = "account", onDelete = ForeignKey.SET_DEFAULT),
+        // @ForeignKey(entity = Month.class, parentColumns = "monthNumber", childColumns = "month")
+})
+public class Record {
+//
+//    public Record(double Amount, char Type, String Description, String Account, long Time, int Day, int Month) {
+//        amount = Amount;
+//        description = Description;
+//        recordType = Type;
+//        this.time = Time;
+//        this.account = Account;
+//        day = Day;
+//        month = Month;
+//    }
 
     @PrimaryKey(autoGenerate = true)
     int recordID;
@@ -29,27 +30,14 @@ public class Record {
     }
 
     @ColumnInfo
-    private double amount;
-
-    public double getAmount() {
-        return amount;
-    }
-
+    public double amount;
 
     @ColumnInfo
-    private char recordType;
+    public char type;
 
-    @ColumnInfo
-    public char getRecordType() {
-        return recordType;
-    }
+    @ColumnInfo(defaultValue = "Main")
+    public String account;
 
-    @Embedded
-    private String account;
-
-    public String getAccount() {
-        return account;
-    }
 
     @ColumnInfo
     private long time;
