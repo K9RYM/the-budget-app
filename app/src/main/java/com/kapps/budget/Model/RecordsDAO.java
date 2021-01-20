@@ -24,5 +24,4 @@ public interface RecordsDAO {
     @Query("SELECT * FROM Records WHERE month=:MonthNum and day=:Day")
     List<Record> getRecordsforDay(int MonthNum, int Day);
 
-
 }
