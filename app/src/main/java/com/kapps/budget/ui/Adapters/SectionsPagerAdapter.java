@@ -2,8 +2,8 @@ package com.kapps.budget.ui.Adapters;
 
 import android.content.Context;
 
-import com.kapps.budget.ui.main.CalendarFragment;
-import com.kapps.budget.ui.main.MainFragment;
+import com.kapps.budget.UIs.main.CalendarFragment;
+import com.kapps.budget.UIs.main.MainFragment;
 
 import java.util.Calendar;
 
@@ -24,7 +24,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
-        super(fm);
+        super(fm , BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         currentDate = Calendar.getInstance().getTime().toString();
         mContext = context;
     }

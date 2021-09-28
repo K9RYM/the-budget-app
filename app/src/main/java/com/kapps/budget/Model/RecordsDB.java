@@ -2,6 +2,10 @@ package com.kapps.budget.Model;
 
 import android.content.Context;
 
+import com.kapps.budget.Interfaces.AccountsDAO;
+import com.kapps.budget.Interfaces.MonthsDAO;
+import com.kapps.budget.Interfaces.RecordsDAO;
+
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;

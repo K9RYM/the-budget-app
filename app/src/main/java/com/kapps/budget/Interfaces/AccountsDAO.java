@@ -1,4 +1,6 @@
-package com.kapps.budget.Model;
+package com.kapps.budget.Interfaces;
+
+import com.kapps.budget.Model.Account;
 
 import java.util.List;
 
@@ -8,7 +10,7 @@ import androidx.room.Query;
 @Dao
 public interface AccountsDAO {
     @Query("INSERT INTO Accounts (accountName,balance,currency) VALUES(:AccountName,:Balance,:Currency)")
-    void CreateAccount(String AccountName, double Balance, String Currency);
+    void CreateAccount( String AccountName , double Balance , String Currency );
 
     @Query("DELETE FROM Accounts WHERE accountName = :AccountName")
     void DeleteAccount(String AccountName);

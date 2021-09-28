@@ -1,4 +1,4 @@
-package com.kapps.budget.ui.main;
+package com.kapps.budget.UIs.main;
 
 import android.os.Bundle;
 import android.util.Log;

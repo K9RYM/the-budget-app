@@ -1,4 +1,6 @@
-package com.kapps.budget.Model;
+package com.kapps.budget.Interfaces;
+
+import com.kapps.budget.Model.Record;
 
 import java.util.List;
 
@@ -17,9 +19,9 @@ public interface RecordsDAO {
 
     @Query("DELETE FROM Records WHERE recordID = :recordID")
     void DeleteRecord(int recordID);
-
+    
     @Query("SELECT * FROM Records WHERE month=:MonthNum")
-    List<Record> getRecordsforMonth(int MonthNum);
+    List<Record> getRecordsforMonth( int MonthNum );
 
     @Query("SELECT * FROM Records WHERE month=:MonthNum and day=:Day")
     List<Record> getRecordsforDay(int MonthNum, int Day);
